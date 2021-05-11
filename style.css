@@ -1,0 +1,30 @@
+#page1 {
+  background-image: url(https://www.maxpixel.net/static/photo/1x/Leisure-Blur-Reading-Book-Background-5342680.jpg);
+  background-position: center center;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+/* Error Message */
+#error {
+  background-color: tomato;
+  color: white;
+  text-transform: uppercase;
+  width: 50%;
+  margin: 2em auto;
+}
+/* Read words */
+#results {
+  font-size: 3em;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1%;
+}
+
+/* sliders */
+/* Hide the number input */
+.full-width-slider input {
+    display: none !important;
+}
+.full-width-slider .ui-slider-track {
+    margin-left: 15px;
+}

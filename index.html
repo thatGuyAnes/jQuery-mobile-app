@@ -1,0 +1,115 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="widht=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div data-role="page" id="page1">
+    <div data-role="header">
+    </div>
+    <!-- Title -->
+    <div class="header">
+      <h1>Speed Reader app</h1>
+      <p>Let's start spead reading</p>
+    </div>
+    <div class="ui-content">
+      <!-- Font size & Speed sliders -->
+      <div id="controlls">
+        <!-- sliders' text grid -->
+        <div class="ui-grid-a">
+          <!-- Font slider's text -->
+          <div class="ui-block-a">
+            <div>
+              FONT SIZE <span id="font-size">50</span> px.
+            </div>
+          </div>
+          <!-- Speed slider's text -->
+          <div class="ui-block-b">
+            <div>
+              <span id="word-speed">300</span> WORDS PER MINUTE.
+            </div>
+          </div>
+        </div>
+        <!-- sliders grid -->
+        <div class="ui-grid-a">
+          <!-- Font size slider -->
+          <div class="ui-block-a">
+            <form class="full-width-slider">
+              <input data-highlight="true" type="range" name="font-size-slider" id="font-size-slider" min="10" max="100"
+                value="50" step="5">
+            </form>
+          </div>
+          <!-- Speed slider -->
+          <div class="ui-block-b">
+            <form class="full-width-slider">
+              <input data-highlight="true" type="range" name="wordSlider" id="wordSlider" min="50" max="500" value="300"
+                step="50">
+            </form>
+          </div>
+        </div>
+        <!-- Progress -->
+        <form class="full-width-slider">
+          <label for="progress-slider">PROGRESS: <span id="percentage">0</span>%</label>
+          <input data-highlight="true" type="range" name="progress-slider" id="progress-slider" min="0" max="100"
+            value="0">
+        </form>
+      </div>
+      <!-- Read word -->
+      <div id="results">
+        word
+      </div>
+      <!-- Error Message -->
+      <div id="error">
+        no text in the box
+      </div>
+      <!-- Text Input -->
+      <div id="input">
+        <textarea id="userInput" placeholder="Paste your text here..."></textarea>
+      </div>
+      <!-- buttons -->
+      <button id="start-btn">Start</button>
+      <button id="new-btn">New</button>
+      <button id="pause-btn">Pause</button>
+      <button id="resume-btn">Resume</button>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a data-icon="home" href="#">Home</a></li>
+          <li><a data-icon="info" href="#">About</a></li>
+          <li><a data-icon="mail" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div data-role="page" id="page2" data-theme="b">
+    <div data-role="header" data-theme="a">
+      <h1>Page 2</h1>
+    </div>
+    <div class="ui-content">
+      <a data-role="button" data-icon="arrow-r" href="#page1" data-transition="slidedown">Go to page 1</a>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="a">
+      <div data-role="navbar">
+        <ul>
+          <li><a data-icon="home" href="#">Home</a></li>
+          <li><a data-icon="info" href="#">About</a></li>
+          <li><a data-icon="mail" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
